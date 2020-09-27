@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HydroOS</title>
+  </head>
+  <body>
+    <style>
+      .content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+    </style>
+    <body bgcolor="black">
+    <div class="content"><center><img src="Pictures/setuploading.png" width="640" height="480"></center></div>
+    <script>
+      function sleep (time) {
+        return new Promise((resolve) => setTimeout(resolve, time));
+      }
+      
+      sleep(500).then(() => {
+          window.location = "/Projects/HydroOS/Framework/Setup/Setup.html";
+      });
+    </script>
+  </body>
+</html>
